@@ -2,14 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background: #0e0e0e;
-    color: #eaeaea;
-    line-height: 1.6;
+    font-family: "Inter", sans-serif;
+    background: #f7fbff;
+    color: #1d2b3a;
+    line-height: 1.7;
 }
+
+/* HERO */
 
 .hero {
     position: relative;
@@ -20,138 +22,169 @@ body {
     justify-content: center;
 }
 
-.overlay {
+.hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.7);
+    background: linear-gradient(
+        rgba(240, 248, 255, 0.85),
+        rgba(220, 240, 255, 0.85)
+    );
 }
 
 .hero-content {
     position: relative;
     text-align: center;
-    max-width: 800px;
-    padding: 20px;
+    max-width: 900px;
+    padding: 40px;
 }
 
 .hero h1 {
-    font-size: 56px;
-    letter-spacing: 2px;
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    color: #1a4f8b;
     margin-bottom: 10px;
 }
 
 .subtitle {
     font-size: 22px;
-    margin-bottom: 15px;
-    opacity: 0.9;
+    margin-bottom: 20px;
+    opacity: 0.85;
 }
 
 .tagline {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 600;
     margin: 25px 0 10px;
 }
 
 .tagline-small {
     font-size: 18px;
-    opacity: 0.8;
-    margin-bottom: 30px;
+    opacity: 0.75;
+    margin-bottom: 40px;
 }
 
-.btn {
+/* BUTTON */
+
+.btn-main {
     display: inline-block;
-    padding: 14px 30px;
-    background: #c89b3c;
-    color: #000;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #4fa3ff, #7fdcff);
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(79,163,255,0.35);
+    transition: all 0.3s ease;
 }
+
+.btn-main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(79,163,255,0.45);
+}
+
+/* SECTIONS */
 
 .section {
-    padding: 80px 20px;
-    background: #121212;
+    padding: 90px 20px;
 }
 
-.section.dark {
-    background: #0a0a0a;
+.section.light-blue {
+    background: linear-gradient(180deg, #eef7ff, #ffffff);
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #c89b3c;
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    color: #1a4f8b;
+    margin-bottom: 40px;
 }
 
 p {
+    font-size: 18px;
     margin-bottom: 18px;
-    font-size: 18px;
 }
 
-.quote {
-    margin-top: 30px;
-    padding-left: 20px;
-    border-left: 4px solid #c89b3c;
-    font-style: italic;
-}
-
-.list {
-    list-style: none;
-    columns: 2;
-    gap: 40px;
-}
-
-.list li {
-    margin-bottom: 12px;
-    font-size: 18px;
-}
-
-.penalty {
+blockquote {
     margin-top: 40px;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-    color: #c89b3c;
+    padding: 25px 30px;
+    background: #eaf5ff;
+    border-left: 6px solid #4fa3ff;
+    font-style: italic;
+    border-radius: 10px;
 }
+
+/* GRID */
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .card {
-    background: #1a1a1a;
-    padding: 25px;
-    border-radius: 6px;
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 18px;
     text-align: center;
     font-size: 18px;
-    border: 1px solid #333;
+    box-shadow: 0 15px 40px rgba(0, 80, 160, 0.08);
 }
+
+.card.soft {
+    background: #f0f8ff;
+}
+
+/* LIST */
+
+.list {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.list li {
+    padding: 12px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #dcecff;
+}
+
+/* PENALTY */
+
+.penalty {
+    margin-top: 50px;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    color: #1a4f8b;
+}
+
+/* CONTACT */
 
 .contact-box {
-    margin-top: 30px;
-    padding: 25px;
-    background: #1a1a1a;
-    border-radius: 6px;
-    border: 1px solid #333;
+    text-align: center;
+    background: #ffffff;
+    padding: 60px 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 80, 160, 0.1);
 }
 
-.final {
-    margin-top: 30px;
-    font-size: 22px;
-    text-align: center;
-    color: #c89b3c;
+.contact-data {
+    margin: 25px 0 35px;
+    font-size: 18px;
 }
+
+/* FOOTER */
 
 footer {
-    background: #000;
-    padding: 20px;
+    background: #eaf5ff;
+    padding: 30px;
     text-align: center;
     font-size: 14px;
-    opacity: 0.6;
+    color: #6a8fb3;
 }
+
